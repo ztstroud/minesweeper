@@ -1,0 +1,64 @@
+#board {
+    border-spacing: 0;
+}
+
+#board .cell {
+    width: 1rem;
+    height: 1rem;
+
+    font-size: 0.6rem;
+    text-align: center;
+    font-family: sans-serif;
+    line-height: 1;
+
+    padding: 0;
+}
+
+#board .cell {
+    background-color: #CCCCCC;
+
+    border-top: 0.15rem solid #EEEEEE;
+    border-right: 0.15rem solid #BBBBBB;
+    border-bottom: 0.15rem solid #AAAAAA;
+    border-left: 0.15rem solid #DDDDDD;
+
+    background-size: 0.6rem 0.6rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#board .cell.count-1 { color: #67c767; }
+#board .cell.count-2 { color: #89c74f; }
+#board .cell.count-3 { color: #cfcc1c; }
+#board .cell.count-4 { color: #c57d3a; }
+#board .cell.count-5 { color: #c04646; }
+#board .cell.count-6 { color: #bc3bc0; }
+#board .cell.count-7 { color: #8231ce; }
+#board .cell.count-8 { color: #452fc2; }
+
+#board.interactive .cell.blank:active {
+    background-color: #BBBBBB;
+
+    border-top: 0.15rem solid #999999;
+    border-right: 0.15rem solid #CCCCCC;
+    border-bottom: 0.15rem solid #DDDDDD;
+    border-left: 0.15rem solid #AAAAAA;
+}
+
+#board.interactive .cell.blank,
+#board.interactive .cell.flagged {
+    cursor: pointer;
+}
+
+#board .cell.clicked {
+    background-color: #EEEEEE;
+    border: 1px solid #DDDDDD;
+}
+
+#board .cell.flagged {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/White_flag_icon.svg/1200px-White_flag_icon.svg.png');
+}
+
+#board .cell.mine {
+    background-image: url('https://static.thenounproject.com/png/915944-200.png');
+}
