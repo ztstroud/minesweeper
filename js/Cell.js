@@ -1,7 +1,6 @@
 export default class Cell {
-    constructor(hasMine, neighborMineCount) {
+    constructor(hasMine) {
         this.hasMine = hasMine;
-        this.neighborMineCount = neighborMineCount;
 
         this.revealed = false;
         this.flagged = false;
