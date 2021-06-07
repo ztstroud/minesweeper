@@ -132,7 +132,7 @@ export default class Board {
 
     /** Renders a cell to a dom element. */
     renderCell(x, y) {
-        const cell = this.cells !== null ? this.cells[y][x] : new Cell(false);
+        const cell = this.cells !== null ? this.cells[y][x] : new Cell(0, 0, false);
         const neighborMineCount = this.cells !== null ? this.minesAround(x, y) : 0;
 
         const type =
@@ -163,7 +163,7 @@ function createCells(width, height, mineCount, excludedPoint = undefined) {
     for(let y = 0; y < height; y++) {
         cells[y] = [];
         for(let x = 0; x < width; x++) {
-            cells[y][x] = new Cell(mineCoordinates[y][x]);
+            cells[y][x] = new Cell(x, y, mineCoordinates[y][x]);
         }
     }
 
