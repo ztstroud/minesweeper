@@ -1,5 +1,14 @@
 #board {
     border-spacing: 0;
+    user-select: none;
+}
+
+#board.lost {
+    filter: sepia() hue-rotate(-45deg) saturate(300%);
+}
+
+#board.won {
+    filter: sepia() hue-rotate(45deg) saturate(200%);
 }
 
 #board .cell {
